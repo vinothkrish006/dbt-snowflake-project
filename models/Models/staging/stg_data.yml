@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: snowflake_raw  # This is a nickname for your source
-    database: DEV_DB     # The actual Database name in Snowflake
-    schema: HR       # The actual Schema name in Snowflake
+  - name: snowflake_raw  
+    database: DEV_DB    
+    schema: HR       
     tables:
       - name: employees
       - name: departments
