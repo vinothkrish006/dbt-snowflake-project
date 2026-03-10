@@ -1,11 +1,9 @@
-{{ config (materialized='view')}}
+{{ config(materialized='view') }}
 
+with source as (
 
-with 
-
-source as (
-
-    select * from {{ source('snowflake_raw', 'employees') }}
+    select * 
+    from {{ source('snowflake_raw','employees') }}
 
 ),
 
