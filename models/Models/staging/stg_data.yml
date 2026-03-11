@@ -2,8 +2,9 @@ version: 2
 
 sources:
   - name: snowflake_raw  
-    database: DEV_DB    
-    schema: HR       
+    database: DEV_DBT    
+    schema: DBT_TEST       
     tables:
       - name: employees
       - name: departments
+      - name: orders

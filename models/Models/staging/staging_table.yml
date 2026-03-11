@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: snowflake_raw  
-    database: DEV_DBT   
-    schema: dbt_test      
-    tables:
-      - name: emp_01
