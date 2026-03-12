@@ -6,11 +6,6 @@ with
 
 source as (
 
-    select * from {{ source('SNOWFLAKE_RAW', 'ORDERS') }}
-
-),
-
-renamed as (
 
     select
         o_orderkey,
@@ -23,8 +18,8 @@ renamed as (
         o_shippriority,
         o_comment
 
-    from source
+    from {{ source('SNOWFLAKE_RAW', 'ORDERS') }}
 
 )
 
-select * from renamed
+select * from source
