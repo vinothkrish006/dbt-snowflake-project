@@ -1,4 +1,3 @@
-
 {{ config(materialized='view') }}
 
 
@@ -6,6 +5,11 @@ with
 
 source as (
 
+    select * from {{ source('raw', 'ORDERS') }}
+
+),
+
+renamed as (
 
     select
         o_orderkey,
@@ -18,8 +22,8 @@ source as (
         o_shippriority,
         o_comment
 
-    from {{ source('SNOWFLAKE_RAW', 'ORDERS') }}
+    from source
 
 )
 
-select * from source
+select * from renamed

@@ -1,10 +1,10 @@
 version: 2
 
 sources:
-  - name : SNOWFLAKE_RAW
+  - name: raw
     database: DEV_DB
     schema: HR
-    tables: 
+    tables:
       - name: EMPLOYEES
       - name: DEPARTMENTS
       - name: ORDERS
